@@ -65,3 +65,5 @@ Price #3: $   50.00
         assert (
             expected == actual
         ), f'Expected the align_text() function to print "{expected}" when the user input the values, {mock_values}; instead, it printed "{actual}".'
+
+        test_calculate_quotient_and_remainder(self, capsys, monkeypatch)

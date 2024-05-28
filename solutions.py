@@ -11,8 +11,8 @@ def calculate_profit():
     You can assume the user will enter only numeric characters, e.g. "3000", not "$3,000.00"
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
     """
-    Sales=input("What is the projected amount of sales? ")
-    calculate_profit=float(Sales)*0.23
+    sales_=input("What is the projected amount of sales? ")
+    calculate_profit=float(sales_)*0.23
     print("Profit: $", format(calculate_profit, ".2f"), sep="")
 
 def calculate_quotient_and_remainder():
@@ -24,10 +24,11 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
-    Number_one=input("Enter one integer: ")
-    Number_two=input("Enter another integer: ")
-    print("Quotient:", int(Number_one) // int(Number_two))
-    print("Remainder:", int(Number_one) % int(Number_two))
+    Number_one=input("Enter number #1: ")
+    Number_two=input("Enter number #2: ")
+    Quotient=int(Number_one) // int(Number_two)
+    Remainder=int(Number_one) % int(Number_two)
+    print(int(Number_two), "goes into", int(Number_one), "a total of", int(Quotient), "times with a remainder of", int(Remainder))
 
 def calculate_miles_per_gallon():
     """
@@ -67,7 +68,11 @@ def align_text():
     num_two=input("Enter price #2: ")
     num_three=input("Enter price #3: ")
 
-    print("Here are your prices!")
-    print("Price #1: $   ", float(num_one))
-    print("Price #2: $  ", float(num_two))
-    print("Price #3: $ ", float(num_three))
+    num_one=float(num_one)
+    num_two=float(num_two)
+    num_three=float(num_three)
+
+    print("\nHere are your prices!\n")
+    print("Price #1: $   ", format(num_one, ".2f"))
+    print("Price #2: $  ", format(num_two, ".2f"))
+    print("Price #3: $ ", format(num_three, ".2f"))

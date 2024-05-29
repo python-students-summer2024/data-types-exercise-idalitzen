@@ -13,7 +13,8 @@ def calculate_profit():
     """
     sales_=input("What is the projected amount of sales? ")
     calculate_profit=float(sales_)*0.23
-    print("Profit: $", format(calculate_profit, ".2f"), sep="")
+    print("Profit: $", format(calculate_profit, ",.2f"), sep="")
+    # format(5200, ',d')
 
 def calculate_quotient_and_remainder():
     """
@@ -43,10 +44,10 @@ def calculate_miles_per_gallon():
     """
     miles_driven=input("What is the number of miles driven? ")
     gallons_used=input("What is the amount of gallons used? ")
-    mgp=(int(miles_driven))/(int(gallons_used))
-    print("Miles driven:", int(miles_driven))
-    print("Gas used (gallons):", int(gallons_used))
-    print("Miles per gallon:", int(mgp))
+    mgp=(float(miles_driven))/(float(gallons_used))
+    #print("Miles driven:", float(miles_driven),)
+    #print("Gas used (gallons):", float(gallons_used))
+    print("Miles per gallon: ", format(mgp, ".1f"))
 
 def align_text():
     """
@@ -73,6 +74,7 @@ def align_text():
     num_three=float(num_three)
 
     print("\nHere are your prices!\n")
-    print("Price #1: $   ", format(num_one, ".2f"))
-    print("Price #2: $  ", format(num_two, ".2f"))
-    print("Price #3: $ ", format(num_three, ".2f"))
+    print("Price #1: $", format(num_one, ">8.2f"))
+    print("Price #2: $", format(num_two, ">8.2f"))
+    print("Price #3: $", format(num_three, ">8.2f"))
+    # Fix the width (format) x = format('Barry', '>20s')
